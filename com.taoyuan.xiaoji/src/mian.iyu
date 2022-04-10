@@ -1,0 +1,37 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffe0e0e0
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=快速记账工具v1.0</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=300dp
+orientation=vertical
+gravity=center_horizontal
+</ppt>
+<event></event>
+</View>
+<View id="4" did="2" type="Button">
+<ppt>width=-2
+height=-2
+text=添加项目</ppt>
+<event><eventItme type="clicki">uigo("tjxm.iyu")</eventItme></event>
+</View>
+<View id="5" did="2" type="Button">
+<ppt>width=-2
+height=-2
+text=我的记录</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">uycl(true)
+ushsp(false)
+</eventItme></UIEventset>

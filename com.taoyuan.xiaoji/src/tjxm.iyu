@@ -1,0 +1,130 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="6" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=项目名称（或序号）：
+textColor=#ff060606
+textSize=30dp</ppt>
+<event></event>
+</View>
+<View id="7" did="1" type="EditText">
+<ppt>width=-1
+height=-2
+text=
+hint=在此输入项目名称（或序号）
+singleLine=true</ppt>
+<event></event>
+</View>
+<View id="8" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=单价：
+textColor=#ff060606
+textSize=30dp
+
+</ppt>
+<event></event>
+</View>
+<View id="9" did="1" type="EditText">
+<ppt>width=-1
+height=-2
+text=
+hint=在此输入单价/元
+singleLine=true
+inputType=numberdecimal</ppt>
+<event></event>
+</View>
+<View id="10" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=数量：
+textColor=#ff060606
+textSize=30dp
+
+</ppt>
+<event></event>
+</View>
+<View id="11" did="1" type="EditText">
+<ppt>width=-1
+height=-2
+text=
+hint=在此输入数量
+singleLine=true
+inputType=number</ppt>
+<event></event>
+</View>
+<View id="12" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="Button">
+<ppt>width=-2
+height=-2
+text=添加</ppt>
+<event><eventItme type="clicki">ug(7,"text",a)
+ug(9,"text",b)
+ug(11,"text",c)
+f(a == "" && b == "" && c == "")
+{
+  tw("请输入完整信息")
+}
+else f(a == "" && b == "")
+{
+  tw("请输入完整信息")
+}
+else f(b == "" && c == "")
+{
+  tw("请输入完整信息")
+}
+else f(a == "" && c == "")
+{
+  tw("请输入完整信息")
+}
+else f(a =="")
+{
+  tw("请输入项目名称")
+}
+else f(b =="")
+{
+  tw("请输入单价")
+}
+else f(c == "")
+{
+  tw("请输入数量")
+}
+else f(a != "" && b != "" && c != "")
+{
+  s*(b,c,true,ji)
+  ss(c + " 个(件)" + a + "，单价" + b + "元，共" + ji + "元。",xx)
+  utw(null,"确认信息",xx,"保存","取消",false,v)
+  {
+    t()
+    {
+      
+    }
+  }
+  else
+  {
+   tw("取消") 
+  }
+}
+</eventItme></event>
+</View>
+<View id="14" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=已经添加的项目将在"我的记录"里查看，可以长按删除。
+textColor=#ffff0014</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">uycl(true)
+ushsp(false)
+</eventItme></UIEventset>
